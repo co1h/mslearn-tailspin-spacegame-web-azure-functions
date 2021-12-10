@@ -34,8 +34,8 @@ namespace TailSpin.SpaceGame.Web
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            //services.AddSingleton<ILeaderboardServiceClient>(new LeaderboardFunctionClient(this.Configuration.GetSection("AppSettings").GetValue(typeof(string), "LeaderboardFunctionUrl").ToString()));
-            services.AddSingleton<ILeaderboardServiceClient>(new LeaderboardFunctionClient("http://tailspin-space-game-leaderboard-25676.azurewebsites.net/api/LeaderboardFunction"));
+            services.AddSingleton<ILeaderboardServiceClient>(new LeaderboardFunctionClient(this.Configuration.GetSection("AppSettings").GetValue(typeof(string), "LeaderboardFunctionUrl").ToString()));
+            //services.AddSingleton<ILeaderboardServiceClient>(new LeaderboardFunctionClient("http://tailspin-space-game-leaderboard-25676.azurewebsites.net/api/LeaderboardFunction"));
 
         }
 
